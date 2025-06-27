@@ -16,13 +16,31 @@ function Displaysteps() {
                 </ol>
             </nav>
 
-            <h2>Step Details</h2>
-            <p><strong>Name:</strong> {name}</p>
-            <p><strong>Description:</strong> {description}</p>
-            <p><strong>Mandatory:</strong> {mandatory ? "Yes" : "No"}</p>
+            <div className="card shadow">
+                <div className="card-body">
+                    <h2>Step Details</h2>
+                    <div className="row mb-3">
+                        <div className="col-sm-3"><strong>Name:</strong></div>
+                        <div className="col-sm-9">{name}</div>
+                    </div>
+                    <div className="row mb-3">
+                        <div className="col-sm-3"><strong>Description:</strong></div>
+                        <div className="col-sm-9">{description}</div>
+                    </div>
+                    <div className="row mb-4">
+                        <div className="col-sm-3"><strong>Mandatory:</strong></div>
+                        <div className="col-sm-9">
+                            {mandatory ? 
+                                <span className="badge bg-warning">Yes</span> : 
+                                <span className="badge bg-success">No</span>
+                            }
+                        </div>
+                    </div>
 
-            <h3>Add Activity:</h3>
-            <button className="btn btn-warning" onClick={() => navigate('/steps/activities')}>+</button>
+                    <h3>Add Activity:</h3>
+                    <button className="btn btn-warning" onClick={() => navigate('/steps/activities')}>+</button>
+                </div>
+            </div>
         </div>
     );
 }

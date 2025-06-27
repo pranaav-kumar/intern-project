@@ -13,8 +13,13 @@ function Activities() {
                 </ol>
             </nav>
 
-            <p>This is a placeholder page for activities</p>
-            <button className="btn btn-secondary" onClick={() => navigate(-1)}>Back</button>
+            <div className="card shadow">
+                <div className="card-body text-center">
+                    <h3>Activities</h3>
+                    <p className="text-muted">This is a placeholder page for activities</p>
+                    <button className="btn btn-secondary" onClick={() => navigate(-1)}>Back</button>
+                </div>
+            </div>
         </div>
     );
 }
