@@ -8,15 +8,22 @@ function Displaysteps() {
     const navigate = useNavigate();
 
     return (
-    <div>
-        <h2>Step Details</h2>
-        <p>Name: {name}</p>
-        <p>Description: {description}</p>
-        <p>Mandatory: {mandatory ? "Yes" : "No"}</p>
+        <div className="container mt-4">
+            <nav aria-label="breadcrumb">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><a href="/">Home</a></li>
+                    <li className="breadcrumb-item active">Steps</li>
+                </ol>
+            </nav>
 
-        <h3>Add Activity:</h3>
-        <button onClick={() => navigate('/steps/activities')}>+</button>
-    </div>
+            <h2>Step Details</h2>
+            <p><strong>Name:</strong> {name}</p>
+            <p><strong>Description:</strong> {description}</p>
+            <p><strong>Mandatory:</strong> {mandatory ? "Yes" : "No"}</p>
+
+            <h3>Add Activity:</h3>
+            <button className="btn btn-warning" onClick={() => navigate('/steps/activities')}>+</button>
+        </div>
     );
 }
 
